@@ -1,7 +1,11 @@
 package com.ct.java.project.jdbc.utils;
 
 import java.util.Scanner;
-
+/**
+ * This util offers methods to do user input checking 
+ * @author christophe
+ *
+ */
 public class InputCheckingUtil {
 	private static InputCheckingUtil util;
 
@@ -30,7 +34,7 @@ public class InputCheckingUtil {
 		long mInt; 
 		while (!scan.hasNextLong()) {
 			System.out.println("That's not a number!");
-			scan.next(); // this is important!
+			scan.nextLine(); // this is important!
 		}
 		mInt = scan.nextLong();
 		return mInt; 

@@ -1,5 +1,9 @@
 package com.ct.java.project.jdbc.domain;
-
+/**
+ * Person POJO
+ * @author christophe
+ *
+ */
 public class Person {
 
 	private long id;

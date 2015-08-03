@@ -4,14 +4,17 @@ import java.util.List;
 
 import com.ct.java.project.jdbc.domain.Item;
 import com.ct.java.project.jdbc.domain.Person;
-
+/**
+ * Define PersonItem dao
+ * @author christophe
+ *
+ */
 public interface PersonItemDao {
 		
-		public List<Item> findAllItemsByPersonId(Person person);
+		List<Item> findAllItemsByPersonId(Person person);
 
-		public boolean removeItemFromCart(long itemId, Person person);
+		boolean removeItemFromCart(long itemId, Person person);
 
-
-		public boolean addItemtoCart(long itemId, Person person);
+		boolean addItemtoCart(long itemId, Person person);
 	
 }

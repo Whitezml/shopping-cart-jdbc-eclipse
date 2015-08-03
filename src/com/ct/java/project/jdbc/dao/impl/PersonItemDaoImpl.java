@@ -15,6 +15,7 @@ import com.ct.java.project.jdbc.utils.ConnectionUtil;
 public class PersonItemDaoImpl implements PersonItemDao {
 	private ConnectionUtil util = ConnectionUtil.getUtil();
 	
+	
 
 
 	@Override
@@ -48,7 +49,8 @@ public class PersonItemDaoImpl implements PersonItemDao {
 	@Override
 	public boolean removeItemFromCart(long itemId, Person person) {
 		boolean success; 
-		String query = "DELETE FROM PERSON_ITEM WHERE   P_ID = ? AND I_ID = ?";
+		String query = "DELETE FROM PERSON_ITEM WHERE  P_ID = ? AND I_ID = ?";// WHERE ROWNUM <= 1
+		
 		
 		try(Connection conn = util.getConnection();
 			PreparedStatement ps = conn.prepareStatement(query);){
